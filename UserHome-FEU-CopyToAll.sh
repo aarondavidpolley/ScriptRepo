@@ -6,7 +6,7 @@ FILE="/Library/Preferences/com.squirrels.Reflection.plist"
 _USERS="$(dscl . list /Users | grep -v ^_.*)"
 for u in $_USERS
 do
-   _dir="${UHOME}/${u}Library/Preferences/"
+   _dir="${UHOME}/${u}/Library/Preferences/"
    if [ -d "$_dir" ]
    then
        /bin/cp "$FILE" "$_dir"
