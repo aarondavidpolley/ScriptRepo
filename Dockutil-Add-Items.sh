@@ -1,3 +1,6 @@
 #!/bin/bash
 
-/Library/Application\ Support/SMART\ Technologies/Frameworks/preference.framework/Versions/A-cl42/prefbuddy Add ":Software:SMART Technologies:Product Update:Mode" integer 2 SystemGlobal
+/usr/local/bin/dockutil --add /Applications/Microsoft\ Word.app/ --allhomes
+/usr/local/bin/dockutil --add /Applications/Microsoft\ Excel.app/ --allhomes
+/usr/local/bin/dockutil --add /Applications/Microsoft\ PowerPoint.app/ --allhomes
+/usr/local/bin/dockutil --add /Applications/Managed\ Software\ Center.app/ --after 'Launchpad' --allhomes
