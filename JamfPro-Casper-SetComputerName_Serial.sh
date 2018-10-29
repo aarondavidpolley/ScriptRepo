@@ -7,7 +7,7 @@
 
 
 #Check if prefix custom variable is empty
-if [[ -z ${4+x} ]]; then
+if [ -z $4 ]; then
 
 #If empty, use this Prefix
 Prefix="ACME-"
@@ -23,7 +23,7 @@ fi
 SerialNumber=$(/usr/sbin/system_profiler SPHardwareDataType | grep "Serial Number (system)" | awk '{print $4}')
 
 #Check if ComputerName custom variable is empty
-if [[ -z ${5+x} ]]; then
+if [ -z $5 ]; then
 
 #If empty, use script logic for name
 NewName="$Prefix$SerialNumber"
