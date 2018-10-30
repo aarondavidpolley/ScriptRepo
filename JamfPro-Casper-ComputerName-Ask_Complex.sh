@@ -27,7 +27,7 @@ AssetNum=$(echo "$AssetNumRAW" | awk -F':' '{print $3}')
 
 
 #Check if custom variable is empty
-if [[ -z ${4+x} ]]; then
+if [ -z $4 ]; then
 
 #If empty, use script logic for name
 Prefix="M"
@@ -40,7 +40,7 @@ Prefix="$4"
 fi
 
 #Check if custom variable is empty
-if [[ -z ${5+x} ]]; then
+if [ -z $5 ]; then
 
 #If empty, use script logic for name
 RoomNum="0000"
