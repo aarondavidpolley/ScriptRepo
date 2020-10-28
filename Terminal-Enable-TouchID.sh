@@ -6,7 +6,7 @@ echo "Setting up Touch ID for macOS terminal"
 
 WHOAREYOU=$(whoami)
 
-if [ "$WHOAREYOU" != "root" ] && [ "$KERNEL" != "Darwin" ]
+if [ "$WHOAREYOU" != "root" ]
 then
 	echo "$(date '+%Y-%m-%d_%H-%M-%S') ERROR: This is designed to run with sudo/root privileges on macOS, exiting..."
 	exit 1
