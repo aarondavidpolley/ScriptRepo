@@ -1,14 +1,14 @@
 #!/bin/bash
 
 #Google Chrome Scripted Update/install script
-#Version: 1.1.0
-#Modified: 2019-07-29
+#Version: 1.1.1
+#Modified: 2021-07-19 for universal binary URL
 
 
 [ -f /tmp/debug ] && set -x
 # This script downloads the latest Google Chrome
 
-URL='https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'
+URL='https://dl.google.com/chrome/mac/universal/stable/GGRO/googlechrome.dmg'
 #just the file name
 dmgfile="${URL##*/}"
 dmgFilePath="/tmp/${dmgfile}"

@@ -4,7 +4,8 @@
 # Note: this will backgrade to production version if a newer version (ie beta) has been installed
 # Author: https://github.com/aarondavidpolley/
 # Repo: https://github.com/aarondavidpolley/ScriptRepo/blob/master/Microsoft-Edge_Install-Update.sh
-appURLmaster="https://go.microsoft.com/fwlink/?linkid=2069148"
+# 2021-7-19 Updated URL with universal version
+appURLmaster="https://go.microsoft.com/fwlink/?linkid=2093504"
 appDownload=$(/usr/bin/curl -I "${appURLmaster}" | grep "Location" | cut -d':' -f2- | awk '{print $1}' | tr -d '\r')
 appVers=$(echo "${appDownload}" | awk -F'-' '{print $NF}' | rev | cut -d'.' -f2- | rev)
 appPKG=$(echo "${appDownload}" | awk -F'/' '{print $NF}')
