@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+#Use this pre macOS Sonoma (14.x)
+#Has changed in macOS Sonoma see Terminal-Enable-TouchID-14plus.sh
+
 echo "Setting up Touch ID for macOS terminal"
 
 #---User Check--#
