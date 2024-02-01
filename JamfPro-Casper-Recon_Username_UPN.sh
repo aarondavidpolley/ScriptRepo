@@ -14,7 +14,7 @@
 loggedInUser=$( echo "show State:/Users/ConsoleUser" | scutil | awk '/Name :/ && ! /loginwindow/ { print $3 }' )
 
 #UPN provided when using a login mechanism like Jamf Connect
-NetworkUser=$(/usr/bin/dscl . -read /Users/${loggedInUser} | grep "NetworkUser" | head -n 1 | cut -d' ' -f2)
+NetworkUser=$(/usr/bin/dscl . -read /Users/"${loggedInUser}" | grep "NetworkUser" | head -n 1 | cut -d' ' -f2)
 
 echo "Running recon for $loggedInUser setting UPN to $NetworkUser $(date)..."
 
