@@ -13,7 +13,6 @@
 # Get the logged in users username
 loggedInUser=$( echo "show State:/Users/ConsoleUser" | scutil | awk '/Name :/ && ! /loginwindow/ { print $3 }' )
 
-
 echo "Running recon for $loggedInUser $(date)..."
 
 # Run recon, submitting the users username which as of 8.61+ can then perform an LDAP lookup
