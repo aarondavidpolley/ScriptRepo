@@ -1,3 +1,5 @@
 #!/bin/sh
 
-/usr/sbin/dseditgroup -o edit -d <username> -t user admin
+loggedInUser=$( echo "show State:/Users/ConsoleUser" | scutil | awk '/Name :/ && ! /loginwindow/ { print $3 }' )
+
+/usr/sbin/dseditgroup -o edit -d "$loggedInUser" -t user admin
